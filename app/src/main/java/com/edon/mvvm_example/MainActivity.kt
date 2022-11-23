@@ -12,7 +12,6 @@ import com.edon.mvvm_example.adapter.BlogRecyclerAdapter
 import com.edon.mvvm_example.databinding.ActivityMainBinding
 import com.edon.mvvm_example.model.Blog
 import com.edon.mvvm_example.viewmodel.MainViewModel
-import com.edon.mvvm_example.viewmodel.MainViewModelFactory
 
 class MainActivity : AppCompatActivity() {
     private lateinit var bnd: ActivityMainBinding
@@ -22,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         bnd = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bnd.root)
 
-        val factory = MainViewModelFactory()
         val viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
         bnd.btnButton.setOnClickListener {

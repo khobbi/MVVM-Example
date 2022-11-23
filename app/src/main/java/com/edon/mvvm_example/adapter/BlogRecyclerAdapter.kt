@@ -11,7 +11,8 @@ import com.edon.mvvm_example.R
 import com.edon.mvvm_example.model.Blog
 import com.edon.mvvm_example.viewmodel.MainViewModel
 
-class BlogRecyclerAdapter(val viewModel: MainViewModel, val dataSet: ArrayList<Blog>, val context: Context): RecyclerView.Adapter<BlogRecyclerAdapter.ViewHolder>() {
+class BlogRecyclerAdapter(val viewModel: MainViewModel, val dataSet: ArrayList<Blog>, val context: Context)
+    :RecyclerView.Adapter<BlogRecyclerAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) :RecyclerView.ViewHolder(view) {
         val blogTitle: TextView = view.findViewById(R.id.txtTitle)
